@@ -13,10 +13,18 @@
         <tr>
             <td><%= player.first_name %></td>
             <td><%= player.last_name %></td>
-            <td><a href="/players/<%= player.id%>">Show</a></td>
+            <td>
+                <%= link_to "Show Profile", players_show_path(player.id)%>
+                <%= link_to "Edit Profile", player_edit_path%>
+                <%# <a href="/players/<%= player.id%>/edit">Edit Profile</a> %>
+                <%= link_to "Delete Player"%>
+                <a href="/players/<%= player.id%>" data-method="delete" data-confirm="do you want to delete <%= player.first_name%> <%= player.last_name%>">Delete Profile</a>
+            </td>
         </tr>
-        <% end%>
+        <% end%> 
     </tbody>
 </table>
 
-<a href="/players/new">New Player</a>
+<%# <a href="/players/new">New Player</a> %>
+
+<%= link_to "New Players", players_new_path%>

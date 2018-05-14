@@ -1,0 +1,7 @@
+GitHub Push
+
+=> git add theassociation
+=> git commit -m "some comment"
+=> git remote add origin https://myUrl
+=> git remote -v
+=> git push origin master
