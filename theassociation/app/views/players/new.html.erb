@@ -1,22 +1,7 @@
+<%= content_for(:title, "New Player")%>
 <h1>Create a new Player</h1>
+<%= render partial: "players/form" %>
 
-<% if flash[:errors] %>
-    <% flash[:errors].each do |e| %>
-    <p style="color: red"><%= e %></p>
-    <% end %>
-<% end %>
-
-<form action="/players" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <p>
-        <label for="firstName">First Name:</label>
-        <input type="text" name="player[first_name]">
-    </p>
-    <p>
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="player[last_name]">
-    </p>
-    <input class="btn btn-lg" type="submit" value="CREATE">
-</form> 
-
-#lesson ended 3:14 
+<div class="btn btn-lg">
+    <%= link_to "<- Back", root_path%>
+</div>

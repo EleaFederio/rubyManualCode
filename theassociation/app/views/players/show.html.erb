@@ -1,18 +1,23 @@
+<%= content_for(:title, "#{@players.first_name}'s profie")%>
 <h1><%= @players.first_name %></h1>
 
 <a href="/players"></a>
 
-<table>
-    <thead>
-        <tr>
-            <td>First Name</td>
-            <td>Last Name</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><%= @players.first_name %></td>
-            <td><%= @players.last_name %></td>
-        </tr>
-    </tbody>
-</table>
+<div class="jumbotron">
+    <table>
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @players.first_name %></td>
+                <td><%= @players.last_name %></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<%= link_to "Home Page", root_path%>
